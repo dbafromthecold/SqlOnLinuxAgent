@@ -10,6 +10,6 @@ RUN apt-get update -y
 
 RUN apt-get install -y mssql-server
 
-RUN apt-get install -y mssql-server-agent
+RUN sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
 
 CMD /opt/mssql/bin/sqlservr
